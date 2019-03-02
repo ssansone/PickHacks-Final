@@ -24,13 +24,13 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:gravity="center"
         android:focusable="true"
-        android:hint="Enter Name"
         android:fontFamily="sans-serif-light"
-        android:textSize="15pt"
+        android:gravity="center"
+        android:hint="Enter username"
         android:textColorHighlight="#88aac2"
-        android:textColorHint="#88aac2" />
+        android:textColorHint="#88aac2"
+        android:textSize="15pt" />
 
     <ImageView
         android:id="@+id/imageView"

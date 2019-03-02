@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
 
+
 //                            tx1.setVisibility(View.VISIBLE);
 //                    tx1.setBackgroundColor(Color.RED);
 //                    counter--;
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),
+                        "Redirecting...",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

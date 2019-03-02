@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "382206286797",
+    "firebase_url": "https://workouttinder.firebaseio.com",
+    "project_id": "workouttinder",
+    "storage_bucket": "workouttinder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382206286797:android:9db8e8a3d89d4933",
+        "android_client_info": {
+          "package_name": "com.example.workouttinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382206286797-qe527q9i8p4s47r4aeq0mbirmfjeqq5n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.workouttinder",
+            "certificate_hash": "1485b6c5aebd2abeac21c63bacf79d7b27e31963"
+          }
+        },
+        {
+          "client_id": "382206286797-1sj64tqdbr70u2gkvatri8g537ma4nvg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2Y_FBGrlP59Welfu81znEwezKpPQOjyY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382206286797-1sj64tqdbr70u2gkvatri8g537ma4nvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

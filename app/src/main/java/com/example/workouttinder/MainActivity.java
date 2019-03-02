@@ -44,14 +44,17 @@ public class MainActivity extends AppCompatActivity {
 //        tx1 = (TextView)findViewById(R.id.textView3);
 //        tx1.setVisibility(View.GONE);
 
-        b1.setOnClickListener(new OnClickListener() {
-            public void onClick(View arg) {
-                Intent viewIntent =
-                        new Intent("android.intent.action.VIEW",
-                                Uri.parse("https://google.com"));
-                startActivity(viewIntent);
-            }
-        });
+//        b1.setOnClickListener(new OnClickListener() {
+//
+//
+//            public void onClick(View arg) {
+////                Intent viewIntent =
+////                        new Intent("android.intent.action.VIEW",
+////                                Uri.parse("https://google.com"));
+////                startActivity(viewIntent);'
+//                System.out.println("hey");
+//            }
+//        });
 
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         ed2.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(),
                             "Redirecting...",Toast.LENGTH_SHORT).show();
+
                 }else{
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
 
@@ -77,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
 //                    }
                 }
 
-                Intent intent = new Intent(MainActivity.this, CreateAccount.class);
-                startActivity(intent);
+
             }
         });
 
@@ -88,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         "Redirecting...",Toast.LENGTH_SHORT).show();
                 finish();
+
+                Intent intent = new Intent(MainActivity.this, CreateAccount.class);
+                startActivity(intent);
             }
         });
     }

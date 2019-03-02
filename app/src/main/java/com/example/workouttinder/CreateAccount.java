@@ -23,7 +23,7 @@ public class CreateAccount extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_create_account);
             Button b3;
             EditText ed3, ed4, ed5, ed6, ed7;
 
@@ -32,25 +32,25 @@ public class CreateAccount extends AppCompatActivity {
             ed5 = (EditText)findViewById(R.id.editText2);
             ed6 = (EditText)findViewById(R.id.editText2);
 
-            b3 = (Button)findViewById(R.id.button2);
+//            b3 = (Button)findViewById(R.id.button2);
 //        tx1 = (TextView)findViewById(R.id.textView3);
 //        tx1.setVisibility(View.GONE);
 
-            b3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    EditText etUserName = (EditText) findViewById(R.id.editText);
-                    String strUserName = etUserName.getText().toString();
+//            b3.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    EditText etUserName = (EditText) findViewById(R.id.editText);
+//                    String strUserName = etUserName.getText().toString();
 
 //                    if(TextUtils.isEmpty(strUserName)) {
 //                        etUserName.setError("The item name cannot be empty.");
 //                        return;
 //                    }
-                    if(strUserName.isEmpty()) {
-                        etUserName.setError("The item name cannot be empty.");
-                        return;
-                    }
+//                    if(strUserName.isEmpty()) {
+//                        etUserName.setError("The item name cannot be empty.");
+//                        return;
+//                    }
 
 //                    if (ed1.getText().toString().equals("admin") &&
 //                            ed2.getText().toString().equals("admin")) {
@@ -62,9 +62,8 @@ public class CreateAccount extends AppCompatActivity {
 //
 //
 //                    }
-                }
-            });
-        }
+//                }
+//           });
+       }
 
     }
-

@@ -31,6 +31,14 @@
           }
         },
         {
+          "client_id": "382206286797-mi9bkhttjjtibj50c9407foebkuu1abl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.workouttinder",
+            "certificate_hash": "dafae2f3f1f69fdba5141a3daa9c4fded9dec980"
+          }
+        },
+        {
           "client_id": "382206286797-1sj64tqdbr70u2gkvatri8g537ma4nvg.apps.googleusercontent.com",
           "client_type": 3
         }

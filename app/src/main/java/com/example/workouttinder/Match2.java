@@ -1,5 +1,6 @@
 package com.example.workouttinder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Context;
@@ -23,27 +24,27 @@ public class Match2 extends AppCompatActivity {
         setContentView(R.layout.activity_match2);
         initializeView();
         gestureDetector = new GestureDetector(this, new GestureListener());
-        tvSwipDescription.setOnTouchListener(new OnSwipeTouchListener() {
-            public void onSwipeTop() {
-                //Toast.makeText("hi").show();
-            }
-            public void onSwipeRight() {
-                // Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastRight), Toast.LENGTH_SHORT).show();
-            }
-            public void onSwipeLeft() {
-                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastLeft), Toast.LENGTH_SHORT).show();
-            }
-            public void onSwipeBottom() {
-                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastBottom), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        tvSwipDescription.setOnTouchListener(new OnSwipeTouchListener() {
+//            public void onSwipeTop() {
+//                //Toast.makeText("hi").show();
+//            }
+//            public void onSwipeRight() {
+//                // Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastRight), Toast.LENGTH_SHORT).show();
+//            }
+//            public void onSwipeLeft() {
+//                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastLeft), Toast.LENGTH_SHORT).show();
+//            }
+//            public void onSwipeBottom() {
+//                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastBottom), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
 
     }
 
     private void initializeView() {
-        tvSwipDescription=(TextView) findViewById(R.id.tvSwipDescription);
+//        tvSwipDescription=(TextView) findViewById(R.id.tvSwipDescription);
     }
     public class OnSwipeTouchListener implements OnTouchListener {
         @Override
@@ -95,20 +96,19 @@ public class Match2 extends AppCompatActivity {
 
     public void onSwipeRight() {
 
-        System.out.println("HEY BRO RIGHT");
+//            Intent intent = new Intent(Match2.this, ItsAMatch1.class);
+//            startActivity(intent);
+
+        System.out.println("hiiii");
     }
 
     public void onSwipeLeft() {
-        System.out.println("HEY BRO LEFT");
+//            Intent intent = new Intent(Match2.this, Match3.class);
+//            startActivity(intent);
+
+        }
     }
 
-//        public void onSwipeTop() {
-//            System.out.println("HEY BRO");
-//        }
-//
-//        public void onSwipeBottom() {
-//            System.out.println("HEY BRO");
-//        }
 
 
-}
+

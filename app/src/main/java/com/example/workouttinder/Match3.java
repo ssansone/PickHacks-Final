@@ -23,27 +23,27 @@ public class Match3 extends AppCompatActivity {
         setContentView(R.layout.activity_match3);
         initializeView();
         gestureDetector = new GestureDetector(this, new GestureListener());
-        tvSwipDescription.setOnTouchListener(new OnSwipeTouchListener() {
-            public void onSwipeTop() {
-                //Toast.makeText("hi").show();
-            }
-            public void onSwipeRight() {
-                // Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastRight), Toast.LENGTH_SHORT).show();
-            }
-            public void onSwipeLeft() {
-                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastLeft), Toast.LENGTH_SHORT).show();
-            }
-            public void onSwipeBottom() {
-                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastBottom), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        tvSwipDescription.setOnTouchListener(new OnSwipeTouchListener() {
+//            public void onSwipeTop() {
+//                //Toast.makeText("hi").show();
+//            }
+//            public void onSwipeRight() {
+//                // Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastRight), Toast.LENGTH_SHORT).show();
+//            }
+//            public void onSwipeLeft() {
+//                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastLeft), Toast.LENGTH_SHORT).show();
+//            }
+//            public void onSwipeBottom() {
+//                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastBottom), Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
 
     }
 
     private void initializeView() {
-        tvSwipDescription=(TextView) findViewById(R.id.tvSwipDescription);
+//        tvSwipDescription=(TextView) findViewById(R.id.tvSwipDescription);
     }
     public class OnSwipeTouchListener implements OnTouchListener {
         @Override

@@ -6,46 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Match">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="227dp"
-        android:layout_marginEnd="142dp"
-        android:layout_marginBottom="33dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="197dp"
-        android:layout_marginBottom="28dp"
-        android:text="Name"
+        android:layout_width="162dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Kelly"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="75sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="187dp"
-        android:text="Interests"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 
     <TextView
         android:id="@+id/tvSwipDescription"
@@ -55,6 +31,52 @@
         android:text=" "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="84dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Interests: Running/Tennis"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:layout_marginBottom="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kelly" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="73dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="530dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/minilogo" />
+
 
 </android.support.constraint.ConstraintLayout>
 

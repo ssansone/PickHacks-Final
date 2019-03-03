@@ -23,3 +23,7 @@ public class Message {
         return belongsToCurrentUser;
     }
 }
+
+ class MemberData{
+
+}

@@ -1,5 +1,6 @@
 package com.example.workouttinder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Context;
@@ -95,7 +96,9 @@ public class Match extends AppCompatActivity {
 
         public void onSwipeRight() {
 
-            System.out.println("HEY BRO RIGHT");
+            Intent intent = new Intent(Match.this, ItsAMatch1.class);
+            startActivity(intent);
+//            System.out.println("HEY BRO RIGHT");
         }
 
         public void onSwipeLeft() {

@@ -10,24 +10,45 @@
         android:id="@+id/textView4"
         android:layout_width="281dp"
         android:layout_height="97dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="297dp"
+        android:layout_marginEnd="65dp"
         android:text="It's A Match!"
         android:textSize="50sp"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="297dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="440dp"
-        tools:srcCompat="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:srcCompat="@drawable/cindy" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="440dp"
-        tools:srcCompat="@tools:sample/avatars" />
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@drawable/kelly" />
+
 </android.support.constraint.ConstraintLayout>

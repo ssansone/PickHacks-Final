@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),
                             "Redirecting...",Toast.LENGTH_SHORT).show();
 
-                }else{
+                }
+                else {
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
 
 
@@ -81,8 +82,10 @@ public class MainActivity extends AppCompatActivity {
 //                    }
                 }
 
-
+                Intent intent = new Intent(MainActivity.this, Match.class);
+                startActivity(intent);
             }
+
         });
 
         b2.setOnClickListener(new View.OnClickListener() {

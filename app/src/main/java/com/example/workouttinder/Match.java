@@ -8,24 +8,51 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Match extends AppCompatActivity {
 
+    TextView tvSwipDescription;
+    private GestureDetector gestureDetector;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_match);
+        initializeView();
+        gestureDetector = new GestureDetector(this, new GestureListener());
+        tvSwipDescription.setOnTouchListener(new OnSwipeTouchListener() {
+            public void onSwipeTop() {
+                //Toast.makeText("hi").show();
+            }
+            public void onSwipeRight() {
+               // Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastRight), Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeLeft() {
+                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastLeft), Toast.LENGTH_SHORT).show();
+            }
+            public void onSwipeBottom() {
+                //Toast.makeText(getApplicationContext(), getResources().getString(R.string.toastBottom), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+    }
+
+    private void initializeView() {
+        tvSwipDescription=(TextView) findViewById(R.id.tvSwipDescription);
+    }
     public class OnSwipeTouchListener implements OnTouchListener {
-
-        private final GestureDetector gestureDetector;
-
-        public OnSwipeTouchListener (Context ctx){
-            gestureDetector = new GestureDetector(ctx, new GestureListener());
-        }
-
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             return gestureDetector.onTouchEvent(event);
         }
+    }
 
-        private final class GestureListener extends SimpleOnGestureListener {
+        private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
             private static final int SWIPE_THRESHOLD = 100;
             private static final int SWIPE_VELOCITY_THRESHOLD = 100;
@@ -51,14 +78,14 @@ public class Match extends AppCompatActivity {
                             result = true;
                         }
                     }
-                    else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
-                        if (diffY > 0) {
-                            onSwipeBottom();
-                        } else {
-                            onSwipeTop();
-                        }
-                        result = true;
-                    }
+//                    else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+//                        if (diffY > 0) {
+//                            onSwipeBottom();
+//                        } else {
+//                            onSwipeTop();
+//                        }
+//                        result = true;
+//                    }
                 } catch (Exception exception) {
                     exception.printStackTrace();
                 }
@@ -67,20 +94,21 @@ public class Match extends AppCompatActivity {
         }
 
         public void onSwipeRight() {
+
+            System.out.println("HEY BRO RIGHT");
         }
 
         public void onSwipeLeft() {
+            System.out.println("HEY BRO LEFT");
         }
 
-        public void onSwipeTop() {
-        }
+//        public void onSwipeTop() {
+//            System.out.println("HEY BRO");
+//        }
+//
+//        public void onSwipeBottom() {
+//            System.out.println("HEY BRO");
+//        }
 
-        public void onSwipeBottom() {
-        }
-    }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_match);
-    }
+
 }

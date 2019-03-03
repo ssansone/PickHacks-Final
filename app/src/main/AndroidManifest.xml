@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Match3"></activity>
+        <activity android:name=".ItsAMatch1"></activity>
+        <activity android:name=".Match3" />
         <activity android:name=".Match2" />
         <activity android:name=".Match" />
         <activity android:name=".CreateAccount" />

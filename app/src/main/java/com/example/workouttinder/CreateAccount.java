@@ -1,5 +1,6 @@
 package com.example.workouttinder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,60 +11,39 @@ import android.widget.Toast;
 
 public class CreateAccount extends AppCompatActivity {
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_create_account);
-//
-//        Button b3;
-//        EditText ed3, ed4, ed5, ed6, ed7;
-        // TextView tx1;
-//    int counter = 3;
- //   }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_create_account);
-            Button b3;
-            EditText ed3, ed4, ed5, ed6, ed7;
+            Button b3 = (Button)findViewById(R.id.button4);
 
-            ed3 = (EditText)findViewById(R.id.editText);
-            ed4 = (EditText)findViewById(R.id.editText2);
-            ed5 = (EditText)findViewById(R.id.editText2);
-            ed6 = (EditText)findViewById(R.id.editText2);
 
-//            b3 = (Button)findViewById(R.id.button2);
-//        tx1 = (TextView)findViewById(R.id.textView3);
-//        tx1.setVisibility(View.GONE);
+        b3.setOnClickListener(new View.OnClickListener() {
 
-//            b3.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//
-//                    EditText etUserName = (EditText) findViewById(R.id.editText);
-//                    String strUserName = etUserName.getText().toString();
 
-//                    if(TextUtils.isEmpty(strUserName)) {
-//                        etUserName.setError("The item name cannot be empty.");
-//                        return;
-//                    }
-//                    if(strUserName.isEmpty()) {
-//                        etUserName.setError("The item name cannot be empty.");
-//                        return;
-//                    }
+        @Override
+        public void onClick(View v) {
 
-//                    if (ed1.getText().toString().equals("admin") &&
-//                            ed2.getText().toString().equals("admin")) {
-//                        Toast.makeText(getApplicationContext(),
-//                                "Redirecting...", Toast.LENGTH_SHORT).show();
-//                    }
-//                    else {
-//                        Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
-//
-//
-//                    }
-//                }
-//           });
+            EditText ed3 = (EditText) findViewById(R.id.ed3);
+            EditText ed4 = (EditText) findViewById(R.id.ed4);
+            EditText ed5 = (EditText) findViewById(R.id.ed5);
+            EditText ed6 = (EditText) findViewById(R.id.ed6);
+
+            if ((ed3.getText() != null && ed3.getText().length() > 0) && (ed4.getText() != null && ed4.getText().length() > 0) && (ed5.getText() != null && ed5.getText().length() > 0) && (ed6.getText() != null && ed6.getText().length() > 0)){
+
+                Intent intent = new Intent(CreateAccount.this, Match.class);
+                startActivity(intent);
+
+            }
+
+            else{
+                System.out.println("HEY BRO");
+            }
+
+
+        }});
        }
 
-    }
+
+        }
+

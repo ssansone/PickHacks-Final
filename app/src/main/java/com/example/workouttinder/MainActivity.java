@@ -1,10 +1,12 @@
 package com.example.workouttinder;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,17 +25,29 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
     Button b2;
     EditText ed1,ed2;
-
-
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private FirebaseAuth mAuth;
+    private static final String TAG = "EmailPassword";
 //    TextView tx1;
 //    int counter = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Obtain the FirebaseAnalytics instance.
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
         setContentView(R.layout.activity_main);
         Button b1 = (Button)findViewById(R.id.button);
         ed1 = (EditText)findViewById(R.id.editText);
@@ -58,19 +72,42 @@ public class MainActivity extends AppCompatActivity {
 
 
         b1.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
             public void onClick(View v) {
-                if(ed1.getText().toString().equals("admin") &&
-                        ed2.getText().toString().equals("admin")) {
-                    Toast.makeText(getApplicationContext(),
-                            "Redirecting...",Toast.LENGTH_SHORT).show();
+                mAuth.signInWithEmailAndPassword(ed1.getText().toString(), ed2.getText().toString())
+                        .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d(TAG, "signInWithEmail:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    Intent intent = new Intent(MainActivity.this, Match.class);
+                                    startActivity(intent);
 
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(MainActivity.this, "Authentication failed.",
+                                            Toast.LENGTH_SHORT).show();
+                                }
 
+//                                // [START_EXCLUDE]
+//                                if (!task.isSuccessful()) {
+//                                    mStatusTextView.setText(R.string.auth_failed);
+//                                }
+//                                // [END_EXCLUDE]
+                            }
+                        });
+//                if(ed1.getText().toString().equals("admin") &&
+//                        ed2.getText().toString().equals("admin")) {
+//                    Toast.makeText(getApplicationContext(),
+//                            "Redirecting...",Toast.LENGTH_SHORT).show();
+//
+//                }
+//                else {
+//                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+//
 
 //                            tx1.setVisibility(View.VISIBLE);
 //                    tx1.setBackgroundColor(Color.RED);
@@ -82,9 +119,6 @@ public class MainActivity extends AppCompatActivity {
 //                    }
                 }
 
-                Intent intent = new Intent(MainActivity.this, Match.class);
-                startActivity(intent);
-            }
 
         });
 
